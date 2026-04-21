@@ -331,6 +331,17 @@ function Pill({ children }) {
   );
 }
 
+function NavLink({ href, children }) {
+  return (
+    <a 
+      href={href} 
+      className="text-sm font-bold text-slate-600 hover:text-slate-900 transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-sky-600 after:transition-all hover:after:w-full"
+    >
+      {children}
+    </a>
+  );
+}
+
 export default function LogoTinaWebsite() {
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -350,39 +361,62 @@ export default function LogoTinaWebsite() {
   return (
     <main className="min-h-screen bg-white text-slate-900 selection:bg-sky-100 selection:text-sky-900">
       {/* Navigation / Header */}
-      <section className="border-b border-slate-200 bg-[linear-gradient(to_bottom,_#ffffff,_#f8fbff)] sticky top-0 z-50">
-        <div className="mx-auto max-w-7xl px-6 py-4 lg:px-8">
-          <header className="flex flex-col gap-4 rounded-3xl border border-slate-200 bg-white/80 backdrop-blur-md p-4 shadow-sm md:flex-row md:items-center md:justify-between">
-            <div className="flex items-center gap-3">
+      <section id="acasa" className="border-b border-slate-200 bg-[linear-gradient(to_bottom,_#ffffff,_#f8fbff)] sticky top-0 z-50">
+        <div className="mx-auto max-w-7xl px-4 py-3 lg:px-8">
+          <header className="flex flex-col gap-6 rounded-[28px] border border-slate-200 bg-white/80 backdrop-blur-md px-6 py-4 shadow-sm lg:flex-row lg:items-center lg:justify-between">
+            <div className="flex items-center gap-3 shrink-0">
               <div className="bg-slate-900 text-white p-2 rounded-xl">
                 <Brain className="w-6 h-6" />
               </div>
-              <div>
+              <a href="#acasa">
                 <div className="text-xl font-bold tracking-tight text-slate-900 leading-none">LogoTina</div>
                 <div className="mt-1 text-[10px] uppercase tracking-wider font-semibold text-slate-400">
                   Logopedie & Dezvoltare
                 </div>
-              </div>
+              </a>
             </div>
-            <div className="flex flex-col gap-3 sm:flex-row">
+
+            <nav className="hidden xl:flex items-center justify-center gap-x-6">
+              <NavLink href="#acasa">Acasă</NavLink>
+              <NavLink href="#dificultati">Dificultăți</NavLink>
+              <NavLink href="#servicii">Servicii</NavLink>
+              <NavLink href="#despre-noi">De ce noi</NavLink>
+              <NavLink href="#cum-lucram">Cum lucrăm</NavLink>
+              <NavLink href="#preturi">Prețuri</NavLink>
+              <NavLink href="#faq">Întrebări</NavLink>
+            </nav>
+
+            <div className="flex flex-wrap items-center gap-3 sm:flex-nowrap">
               <a
                 href="https://wa.me/40744184423"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 justify-center rounded-2xl border border-emerald-200 bg-emerald-50 px-6 py-3 text-sm font-semibold text-emerald-700 transition hover:bg-emerald-100 active:scale-95 shadow-sm"
+                className="flex-1 lg:flex-none inline-flex items-center gap-2 justify-center rounded-2xl border border-emerald-200 bg-emerald-50 px-5 py-2.5 text-sm font-semibold text-emerald-700 transition hover:bg-emerald-100 active:scale-95 shadow-sm"
               >
                 <MessageCircle className="w-4 h-4" />
                 WhatsApp
               </a>
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2 justify-center rounded-2xl bg-slate-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-slate-800 active:scale-95"
+                className="flex-1 lg:flex-none inline-flex items-center gap-2 justify-center rounded-2xl bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-slate-800 active:scale-95"
               >
                 <Mail className="w-4 h-4" />
                 Contact
               </a>
             </div>
           </header>
+
+          {/* Quick Sub-Navigation Buttons */}
+          <div className="mt-4 flex items-center gap-2 overflow-x-auto pb-2 no-scrollbar scroll-smooth">
+            <a href="#contact-rapid" className="shrink-0 rounded-xl bg-sky-50 border border-sky-100 px-4 py-2 text-xs font-bold text-sky-700 hover:bg-sky-100 transition-colors whitespace-nowrap">Contact Rapid</a>
+            <a href="#informatii-esentiale" className="shrink-0 rounded-xl bg-slate-100 border border-slate-200 px-4 py-2 text-xs font-bold text-slate-700 hover:bg-slate-200 transition-colors whitespace-nowrap">Informații esențiale</a>
+            <a href="#dificultati" className="shrink-0 rounded-xl bg-white border border-slate-200 px-4 py-2 text-xs font-bold text-slate-600 hover:border-sky-300 hover:text-sky-600 transition-all whitespace-nowrap">Cu ce vă putem ajuta</a>
+            <a href="#servicii" className="shrink-0 rounded-xl bg-white border border-slate-200 px-4 py-2 text-xs font-bold text-slate-600 hover:border-sky-300 hover:text-sky-600 transition-all whitespace-nowrap">Servicii specializate</a>
+            <a href="#despre-noi" className="shrink-0 rounded-xl bg-white border border-slate-200 px-4 py-2 text-xs font-bold text-slate-600 hover:border-sky-300 hover:text-sky-600 transition-all whitespace-nowrap">De ce noi</a>
+            <a href="#cum-lucram" className="shrink-0 rounded-xl bg-white border border-slate-200 px-4 py-2 text-xs font-bold text-slate-600 hover:border-sky-300 hover:text-sky-600 transition-all whitespace-nowrap">Cum lucrăm</a>
+            <a href="#preturi" className="shrink-0 rounded-xl bg-white border border-slate-200 px-4 py-2 text-xs font-bold text-slate-600 hover:border-sky-300 hover:text-sky-600 transition-all whitespace-nowrap">Prețuri</a>
+            <a href="#faq" className="shrink-0 rounded-xl bg-sky-600 text-white px-4 py-2 text-xs font-bold hover:bg-sky-700 transition-colors whitespace-nowrap">FAQ / Întrebări</a>
+          </div>
         </div>
       </section>
 
@@ -444,7 +478,7 @@ export default function LogoTinaWebsite() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="grid gap-6"
             >
-              <div className="rounded-[32px] sm:rounded-[40px] border border-slate-200 bg-white p-6 sm:p-8 shadow-xl shadow-slate-100">
+              <div id="contact-rapid" className="rounded-[32px] sm:rounded-[40px] border border-slate-200 bg-white p-6 sm:p-8 shadow-xl shadow-slate-100 scroll-mt-32">
                 <div className="flex items-center gap-4 text-sky-600">
                   <div className="bg-sky-50 p-2 rounded-2xl shrink-0">
                     <Phone className="w-6 h-6" />
@@ -470,7 +504,7 @@ export default function LogoTinaWebsite() {
                 </div>
               </div>
 
-              <div className="rounded-[32px] sm:rounded-[40px] border border-slate-900 bg-slate-900 p-6 sm:p-8 text-white shadow-2xl shadow-slate-200 relative overflow-hidden group">
+              <div id="informatii-esentiale" className="rounded-[32px] sm:rounded-[40px] border border-slate-900 bg-slate-900 p-6 sm:p-8 text-white shadow-2xl shadow-slate-200 relative overflow-hidden group scroll-mt-32">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -mr-16 -mt-16 blur-3xl group-hover:scale-150 transition-transform duration-700"></div>
                 <div className="text-lg sm:text-xl font-bold">Informații esențiale</div>
                 <div className="mt-6 space-y-4 text-sm sm:text-base leading-relaxed text-slate-300">
@@ -498,7 +532,7 @@ export default function LogoTinaWebsite() {
       </section>
 
       {/* Concerns Section */}
-      <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-24 lg:px-8">
+      <section id="dificultati" className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-24 lg:px-8 scroll-mt-32">
         <SectionHeader
           badge="Cu ce va putem ajuta"
           title="Situatii pentru care suntem cautati frecvent"
@@ -529,7 +563,7 @@ export default function LogoTinaWebsite() {
       </section>
 
       {/* Services Section */}
-      <section id="servicii" className="border-y border-slate-200 bg-slate-50/50">
+      <section id="servicii" className="border-y border-slate-200 bg-slate-50/50 scroll-mt-32">
         <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-24 lg:px-8">
           <SectionHeader
             badge="Lista Servicii"
@@ -578,7 +612,7 @@ export default function LogoTinaWebsite() {
       </section>
 
       {/* Trust Points */}
-      <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-24 lg:px-8">
+      <section id="despre-noi" className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-24 lg:px-8 scroll-mt-32">
         <div className="grid gap-12 lg:gap-16 lg:grid-cols-[0.9fr_1.1fr] items-center">
           <div>
             <SectionHeader
@@ -619,7 +653,7 @@ export default function LogoTinaWebsite() {
       </section>
 
       {/* Process Section */}
-      <section className="border-y border-slate-200 bg-slate-900 py-16 sm:py-24 text-white relative overflow-hidden">
+      <section id="cum-lucram" className="border-y border-slate-200 bg-slate-900 py-16 sm:py-24 text-white relative overflow-hidden scroll-mt-32">
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,_rgba(56,189,248,0.1)_0%,_transparent_50%)]"></div>
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-20">
@@ -652,7 +686,7 @@ export default function LogoTinaWebsite() {
       </section>
 
       {/* Pricing Section */}
-      <section id="preturi" className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-24 lg:px-8">
+      <section id="preturi" className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-24 lg:px-8 scroll-mt-32">
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <SectionHeader
             badge="Lista tarife"
@@ -743,7 +777,7 @@ export default function LogoTinaWebsite() {
       </section>
 
       {/* FAQ Section */}
-      <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-24 lg:px-8 border-t border-slate-200">
+      <section id="faq" className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-24 lg:px-8 border-t border-slate-200 scroll-mt-32">
         <div className="grid gap-12 lg:gap-16 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
             <SectionHeader
@@ -779,7 +813,7 @@ export default function LogoTinaWebsite() {
       </section>
 
       {/* Final CTA / Contact Overlay */}
-      <section id="contact" className="mx-auto max-w-7xl px-4 pb-12 sm:pb-24 lg:px-8">
+      <section id="contact" className="mx-auto max-w-7xl px-4 pb-12 sm:pb-24 lg:px-8 scroll-mt-32">
         <div className="relative rounded-[40px] sm:rounded-[48px] overflow-hidden bg-slate-900 p-8 sm:p-16 lg:p-20 text-white shadow-2xl">
           <div className="absolute inset-0 bg-[linear-gradient(135deg,_rgba(15,23,42,1)_0%,_rgba(30,41,59,1)_100%)]"></div>
           <div className="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 bg-sky-500/10 blur-[100px] rounded-full"></div>
