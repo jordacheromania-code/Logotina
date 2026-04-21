@@ -21,7 +21,8 @@ import {
   ExternalLink,
   Send,
   Mail,
-  MessageCircle
+  MessageCircle,
+  BookOpen
 } from 'lucide-react';
 import { motion } from 'motion/react';
 
@@ -148,6 +149,11 @@ const concerns = [
     title: "Suport cognitiv si emotional",
     text: "Sustinem dezvoltarea prin psihoterapie cognitiv-comportamentala si consiliere psihologica pentru rezultate sustenabile.",
     icon: <Heart className="w-6 h-6 text-rose-600" />
+  },
+  {
+    title: "Tulburări de învățare / Dislexo-disgrafie",
+    text: "Dezvoltăm și corectăm abilitățile de citire și scriere, prin îmbunătățirea procesării fonologice, a recunoașterii literelor și a automatizării corespondenței sunet–grafem.",
+    icon: <BookOpen className="w-6 h-6 text-indigo-600" />
   },
 ];
 
