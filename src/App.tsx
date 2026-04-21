@@ -130,23 +130,23 @@ function ContactForm() {
 
 const concerns = [
   {
-    title: "Pronuntie neclara sau sunete rostite gresit",
-    text: "Lucram pe articulare, emitere corecta, diferentiere de sunete si consolidare in vorbirea de zi cu zi.",
+    title: "Tulburari de pronuntie (Dislalie)",
+    text: "Corectam articularea, emiterea corecta a sunetelor si consolidam vorbirea clara in viata de zi cu zi pentru copii si adulti.",
     icon: <MessageSquare className="w-6 h-6 text-sky-600" />
   },
   {
-    title: "Intarziere in limbaj sau vocabular redus",
-    text: "Evaluam nivelul actual de dezvoltare si construim un plan de stimulare adaptat varstei si nevoilor reale.",
+    title: "Intarziere in dezvoltarea limbajului",
+    text: "Stimulam aparitia si dezvoltarea vocabularului prin metode adaptate, evaluand corect nivelul actual de comunicare.",
     icon: <Brain className="w-6 h-6 text-emerald-600" />
   },
   {
-    title: "Blocaje, repetitii sau dificultati de fluenta",
-    text: "Intervenim cu blandete si structura pentru ritm, fluenta si incredere in comunicare.",
+    title: "Balbaiala si dificultati de fluenta",
+    text: "Intervenim cu tehnici specializate de logopedie pentru ritm si fluenta, redand increderea in fortele proprii.",
     icon: <Zap className="w-6 h-6 text-amber-600" />
   },
   {
-    title: "Nevoie de sustinere cognitiva sau emotionala",
-    text: "Completam interventia prin stimulare cognitiva, consiliere psihologica sau psihoterapie, atunci cand este necesar.",
+    title: "Suport cognitiv si emotional",
+    text: "Sustinem dezvoltarea prin psihoterapie cognitiv-comportamentala si consiliere psihologica pentru rezultate sustenabile.",
     icon: <Heart className="w-6 h-6 text-rose-600" />
   },
 ];
@@ -402,7 +402,7 @@ export default function LogoTinaWebsite() {
               </div>
 
               <h1 className="mt-6 text-3xl font-extrabold tracking-tight text-slate-950 sm:text-6xl lg:text-7xl lg:leading-[1.1]">
-                Evaluare clara si <span className="text-sky-600">sprijin real</span> pentru dezvoltare.
+                Logopedie <span className="text-sky-600">București</span> – Evaluare și sprijin real.
               </h1>
 
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-slate-600 sm:text-xl">
