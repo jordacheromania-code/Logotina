@@ -411,7 +411,9 @@ export default function LogoTinaWebsite() {
 
               <div className="mt-8 sm:mt-10 flex flex-col gap-3 sm:flex-row">
                 <a
-                  href="tel:0744184423"
+                  href="https://wa.me/40744184423?text=Buna%20ziua,%20doresc%20o%20programare%20pentru%20evaluare%20logopedica."
+                  target="_blank"
+                  rel="noreferrer"
                   className="group inline-flex items-center justify-center gap-2 rounded-2xl bg-slate-900 px-8 py-4 text-base sm:text-lg font-semibold text-white transition hover:bg-slate-800 active:scale-95 shadow-lg shadow-slate-200"
                 >
                   Programeaza evaluarea
@@ -559,7 +561,12 @@ export default function LogoTinaWebsite() {
                 <h3 className="mt-6 text-lg font-bold leading-7 text-slate-900">{service.title}</h3>
                 <p className="mt-4 text-sm leading-6 text-slate-500 flex-grow">{service.description}</p>
                 <div className="mt-8">
-                  <a href="tel:0744184423" className="text-sm font-bold text-slate-900 inline-flex items-center gap-2 group">
+                  <a 
+                    href={`https://wa.me/40744184423?text=Buna%20ziua,%20doresc%20o%20programare%20pentru:%20${encodeURIComponent(service.title)}`}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-sm font-bold text-slate-900 inline-flex items-center gap-2 group"
+                  >
                     Programeaza
                     <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </a>
@@ -718,7 +725,9 @@ export default function LogoTinaWebsite() {
                 </div>
 
                 <a
-                  href="tel:0744184423"
+                  href={`https://wa.me/40744184423?text=Buna%20ziua,%20doresc%20detalii%20despre%20${encodeURIComponent(plan.title)}%20(${encodeURIComponent(plan.subtitle)})`}
+                  target="_blank"
+                  rel="noreferrer"
                   className={`mt-10 inline-flex w-full items-center justify-center rounded-2xl px-6 py-4 text-base font-bold transition active:scale-95 shadow-lg ${
                     plan.featured
                       ? "bg-white text-slate-900 hover:bg-slate-100 shadow-white/5"
